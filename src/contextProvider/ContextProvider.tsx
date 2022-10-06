@@ -8,6 +8,7 @@ export const StateProvider: FC<StateProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    // localStorage first render
     const obj = JSON.parse(localStorage.getItem('todos') || '{}');
 
     if (!obj.hasOwnProperty('todos')) {

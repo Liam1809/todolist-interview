@@ -1,3 +1,4 @@
+// constants enum
 export enum BUTTON_TYPE_CLASSES {
   add = 'add',
   remove = 'remove',

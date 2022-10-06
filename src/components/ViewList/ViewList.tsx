@@ -2,7 +2,7 @@ import React, { FC, Fragment, useContext, useEffect } from 'react';
 import {
   completeTodoItem,
   getTodoItems,
-  removeTodoItem,
+  deleteTodoItem,
 } from '../../actions/actions';
 import { BUTTON_TYPE_CLASSES } from '../../constants/enums';
 import { StateContext } from '../../contextProvider/ContextProvider';
@@ -11,6 +11,7 @@ import Button from '../Button/Button';
 import { ViewListContainer, BoxContainer, NoteContainer } from './styles';
 
 const ViewList: FC = () => {
+  // retrieve root data
   const {
     state: { todos },
     dispatch,
@@ -21,14 +22,17 @@ const ViewList: FC = () => {
     // eslint-disable-next-line
   }, []);
 
+  // handle remote a note from the list
   const handleRemoveNote = (id: string) => {
-    dispatch(removeTodoItem(id));
+    dispatch(deleteTodoItem(id));
   };
 
+  // handle update complete of a note from the list
   const handleCompleteNote = (note: TodoItem) => {
     dispatch(completeTodoItem(note));
   };
 
+  // generatte todosArr
   const todosArr = todos.map(item => (
     <BoxContainer key={item.id}>
       <NoteContainer completed={item.completed}>{item.note}</NoteContainer>

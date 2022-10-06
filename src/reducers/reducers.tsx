@@ -1,10 +1,12 @@
 import { RootState, TodoActionWithPayload, TodoItem } from '../types/types';
 import { TODOS_ACTION_TYPE } from '../constants/enums';
 
+// initial state
 export const initialState: RootState = {
   todos: [],
 };
 
+// Root reducer
 export const reducer = (
   state: RootState,
   action: TodoActionWithPayload

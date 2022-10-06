@@ -18,11 +18,13 @@ const FormInput: FC = () => {
   const { dispatch } = useContext(StateContext);
   const [inputField, setInputField] = useState<string>('');
 
+  // handle submit form
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (inputField === '') return;
 
+    // add new note
     dispatch(
       addTodoItem({
         id: new Date().getTime().toString(),
@@ -34,6 +36,7 @@ const FormInput: FC = () => {
     setInputField('');
   };
 
+  // handle onchange
   const handleInputFieldOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputField(event.target.value.slice(0, 50));
   };
@@ -43,6 +46,7 @@ const FormInput: FC = () => {
       <form onSubmit={handleSubmit}>
         <FormContainer>
           <Input
+            placeholder="enter something"
             type="text"
             onChange={handleInputFieldOnChange}
             value={inputField}
