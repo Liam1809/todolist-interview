@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/todolist-interview/static/css/main.e6c13ad2.css",
+    "main.js": "/todolist-interview/static/js/main.63b9c6e5.js",
+    "static/js/787.90e8e1ad.chunk.js": "/todolist-interview/static/js/787.90e8e1ad.chunk.js",
+    "index.html": "/todolist-interview/index.html",
+    "main.e6c13ad2.css.map": "/todolist-interview/static/css/main.e6c13ad2.css.map",
+    "main.63b9c6e5.js.map": "/todolist-interview/static/js/main.63b9c6e5.js.map",
+    "787.90e8e1ad.chunk.js.map": "/todolist-interview/static/js/787.90e8e1ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.63b9c6e5.js"
+  ]
+}
