@@ -18,7 +18,8 @@ const ViewList: FC = () => {
 
   useEffect(() => {
     dispatch(getTodoItems());
-  }, [dispatch]);
+    // eslint-disable-next-line
+  }, []);
 
   const handleRemoveNote = (id: string) => {
     dispatch(removeTodoItem(id));

@@ -11,9 +11,8 @@ export const reducer = (
 ): RootState => {
   switch (action.type) {
     case TODOS_ACTION_TYPE.get:
-      const todos: TodoItem[] = JSON.parse(
-        localStorage.getItem('todos') || ''
-      ).todos;
+      const obj = JSON.parse(localStorage.getItem('todos') || '{}');
+      const todos: TodoItem[] = obj.todos;
 
       return { ...state, todos: todos };
 
